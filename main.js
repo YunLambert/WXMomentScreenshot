@@ -45,8 +45,6 @@ if (inBlacklist) {
     );
 }
 
-if (navigator.userAgent.toLowerCase().indexOf('micromessenger') !== -1) loadScript('https://cdn.jsdelivr.net/gh/YunLambert/WXMomentScreenshot/fuckWechat.min.js');
-
 if (!window.Promise) loadScript('https://cdn.jsdelivr.net/npm/promise-polyfill/dist/polyfill.min.js');
 
 var avatarURL = [];
@@ -60,7 +58,7 @@ var configDefault = {
     text: '很实用的教程[微笑]\n需要收集五个赞 谢谢大家啦～(　^ω^)',
     location: '',
     app: '',
-    height: 1920,
+    height: 1792,
     uiWhite: false,
     firstAvatar: false,
     appIcon: false,
@@ -428,17 +426,17 @@ document.getElementById('generate').addEventListener('click', function () {
     document.getElementById('topBarIconWifi').src = 'mdicons/icons/wifi.svg' ;
     document.getElementById('topBarIconSignal').src = 'mdicons/icons/signal.svg';
     document.getElementById('topBarIconBattery').src = 'mdicons/icons/battery.svg';
-    
-    var iconApp = [['qq', .5], ['wechat', .5], ['cloudmusic', .25], ['coolapk', .15], ['tieba', .15], ['acfun', .15]];
-    iconApp.sort(function () { return (Math.random() > .5) ? 1 : -1 });
-    document.getElementById('topBarAppIcons').innerHTML = '';
-    if (document.getElementById('configTopBarAppIcons').checked) {
-        for (var i = 0; i < iconApp.length; i++) {
-            if (Math.random() < iconApp[i][1]) {
-                document.getElementById('topBarAppIcons').innerHTML += '<img class="topBarIcon" src="mdicons/' + (useWhiteUI ? 'black_icons' : 'white_icons') + '/app_' + iconApp[i][0] +'.svg">';
-            }
-        }
-    }
+
+    // var iconApp = [['qq', .5], ['wechat', .5], ['cloudmusic', .25], ['coolapk', .15], ['tieba', .15], ['acfun', .15]];
+    // iconApp.sort(function () { return (Math.random() > .5) ? 1 : -1 });
+    // document.getElementById('topBarAppIcons').innerHTML = '';
+    // if (document.getElementById('configTopBarAppIcons').checked) {
+    //     for (var i = 0; i < iconApp.length; i++) {
+    //         if (Math.random() < iconApp[i][1]) {
+    //             document.getElementById('topBarAppIcons').innerHTML += '<img class="topBarIcon" src="mdicons/' + (useWhiteUI ? 'black_icons' : 'white_icons') + '/app_' + iconApp[i][0] +'.svg">';
+    //         }
+    //     }
+    // }
 
     //设置时间
     var configPostDate = document.getElementById('configPostDate').valueAsDate;
@@ -503,7 +501,7 @@ document.getElementById('generate').addEventListener('click', function () {
     //显示用于生成图片的div
     var height = Number(document.getElementById('configHeight').value);
     document.getElementById('fakeWechatMoment').style.display = 'block';
-    document.getElementById('fakeWechatMoment').style.width = '1080px';
+    document.getElementById('fakeWechatMoment').style.width = '828px';
     document.getElementById('fakeWechatMoment').style.height = '';
     document.getElementById('fakeWechatMoment').style.height = ((window.getComputedStyle(document.getElementById('fakeWechatMoment')).height.replace('px', '') > height) ? window.getComputedStyle(document.getElementById('fakeWechatMoment')).height.replace('px', '') : height) + 'px';
 
