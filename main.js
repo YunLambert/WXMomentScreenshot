@@ -354,18 +354,23 @@ for (var i = 1; i <= 9; i++) {
 
 document.getElementById('generate').addEventListener('click', function () {
     // 是否使用7.0以上版本白色界面？
-    var useWhiteUI = document.getElementById('configUIWhite').checked;
-    if (useWhiteUI) {
-        document.getElementById('fakeWechatMoment').classList.add('whiteUI');
-        document.querySelector('#header > img').src = 'mdicons/black_icons/back.svg';
-        document.querySelector('.content > img').src = 'mdicons/black_icons/comment.svg';
-        document.querySelector('#footer > img').src = 'mdicons/black_icons/emoticon.svg';
-    } else {
-        document.getElementById('fakeWechatMoment').classList.remove('whiteUI');
-        document.querySelector('#header > img').src = 'mdicons/white_icons/back.svg';
-        document.querySelector('.content > img').src = 'mdicons/white_icons/comment.svg';
-        document.querySelector('#footer > img').src = 'mdicons/white_icons/emoticon.svg';
-    }
+    // var useWhiteUI = document.getElementById('configUIWhite').checked;
+    // if (useWhiteUI) {
+    //     document.getElementById('fakeWechatMoment').classList.add('whiteUI');
+    //     document.querySelector('#header > img').src = 'mdicons/black_icons/back.svg';
+    //     document.querySelector('.content > img').src = 'mdicons/black_icons/comment.svg';
+    //     document.querySelector('#footer > img').src = 'mdicons/black_icons/emoticon.svg';
+    // } else {
+    //     document.getElementById('fakeWechatMoment').classList.remove('whiteUI');
+    //     document.querySelector('#header > img').src = 'mdicons/white_icons/back.svg';
+    //     document.querySelector('.content > img').src = 'mdicons/white_icons/comment.svg';
+    //     document.querySelector('#footer > img').src = 'mdicons/white_icons/emoticon.svg';
+    // }
+
+    document.getElementById('fakeWechatMoment').classList.remove('whiteUI');
+    document.querySelector('#header > img').src = 'mdicons/black_icons/back.svg';
+    document.querySelector('.content > img').src = 'mdicons/black_icons/comment.svg';
+    document.querySelector('#footer > img').src = 'mdicons/black_icons/emoticon.svg';
 
     //设置生成的图片上的各种属性
     document.getElementById('name').innerText = document.getElementById('configName').value;
@@ -447,7 +452,7 @@ document.getElementById('generate').addEventListener('click', function () {
     configScreenshotDate.setMinutes(document.getElementById('configScreenshotTimeMinute').value);
 
     document.getElementById('time').innerHTML = getTimeString(configScreenshotDate, configPostDate);
-    document.getElementById('topBarTime').innerText = ((document.getElementById('configScreenshotTimeHour').value < 10) ? ('0' + document.getElementById('configScreenshotTimeHour').value) : document.getElementById('configScreenshotTimeHour').value) + ':' + ((document.getElementById('configScreenshotTimeMinute').value < 10) ? ('0' + document.getElementById('configScreenshotTimeMinute').value) : document.getElementById('configScreenshotTimeMinute').value);
+    document.getElementById('topBarTime').innerText = '  ' + ((document.getElementById('configScreenshotTimeHour').value < 10) ? ('0' + document.getElementById('configScreenshotTimeHour').value) : document.getElementById('configScreenshotTimeHour').value) + ':' + ((document.getElementById('configScreenshotTimeMinute').value < 10) ? ('0' + document.getElementById('configScreenshotTimeMinute').value) : document.getElementById('configScreenshotTimeMinute').value);
 
     if (document.getElementById('configApp')) {
         if (document.getElementById('configApp').value.match(/视频号 *· *(.+)/g)) {
@@ -502,8 +507,8 @@ document.getElementById('generate').addEventListener('click', function () {
     var height = Number(document.getElementById('configHeight').value);
     document.getElementById('fakeWechatMoment').style.display = 'block';
     document.getElementById('fakeWechatMoment').style.width = '828px';
-    document.getElementById('fakeWechatMoment').style.height = '';
-    document.getElementById('fakeWechatMoment').style.height = ((window.getComputedStyle(document.getElementById('fakeWechatMoment')).height.replace('px', '') > height) ? window.getComputedStyle(document.getElementById('fakeWechatMoment')).height.replace('px', '') : height) + 'px';
+    document.getElementById('fakeWechatMoment').style.height = '1792px';
+    // document.getElementById('fakeWechatMoment').style.height = ((window.getComputedStyle(document.getElementById('fakeWechatMoment')).height.replace('px', '') > height) ? window.getComputedStyle(document.getElementById('fakeWechatMoment')).height.replace('px', '') : height) + 'px';
 
     //点赞数为0时隐藏点赞区
     if (document.getElementById('configLike').value <= 0) {
