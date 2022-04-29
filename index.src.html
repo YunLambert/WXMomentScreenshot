@@ -8,9 +8,7 @@
     <meta http-equiv="Cache-Control" content="no-siteapp">
     <meta http-equiv="Cache-Control" content="no-transform">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@1/dist/css/mdui.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/TransparentLC/WechatMomentScreenshot/style.min.css">
-    <!-- <link rel="stylesheet" href="https://unpkg.com/mdui@1/dist/css/mdui.min.css"> -->
-    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/YunLambert/WXMomentScreenshot/style.min.css">
     <script>new URL(location.href).searchParams.has("debug")&&(document.write('<scr'+'ipt src="https://cdn.jsdelivr.net/npm/eruda"></scr'+'ipt>'),document.write('<scr'+'ipt>eruda.init()</scr'+'ipt>'))</script>
 </head>
 <body class="mdui-theme-primary-indigo mdui-theme-accent-pink mdui-appbar-with-toolbar">
@@ -282,8 +280,8 @@
         </div>
 
         <button id="generate" class="mdui-btn mdui-ripple mdui-color-theme-accent mdui-btn-block mdui-m-t-2">生成</button>
-        <button class="mdui-btn mdui-ripple mdui-btn-block mdui-text-color-theme-accent mdui-m-t-1" mdui-dialog="{target:'#donate'}">请小透明喝一瓶肥宅快乐水～(*´∀`)</button>
-        <button class="mdui-btn mdui-ripple mdui-btn-block mdui-text-color-theme-accent mdui-m-t-1" onclick="copyGitLink()">复制本工具的链接，分享给有需要的人(`ヮ´ )</button>
+        <!-- <button class="mdui-btn mdui-ripple mdui-btn-block mdui-text-color-theme-accent mdui-m-t-1" mdui-dialog="{target:'#donate'}">请小透明喝一瓶肥宅快乐水～(*´∀`)</button> -->
+        <!-- <button class="mdui-btn mdui-ripple mdui-btn-block mdui-text-color-theme-accent mdui-m-t-1" onclick="copyGitLink()">复制本工具的链接，分享给有需要的人(`ヮ´ )</button> -->
         <button class="mdui-btn mdui-ripple mdui-btn-block mdui-text-color-theme-accent mdui-m-t-1" onclick="localStorage.removeItem('config');localStorage.removeItem('avatar');mdui.snackbar({message:'已清除～刷新后将使用默认设置'})">清除保存的设置信息</button>
         <div id="gitLink" style="display:none">https://git.io/WMS</div>
 
@@ -492,7 +490,8 @@
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/combine/npm/mdui@1/dist/js/mdui.min.js,npm/html2canvas@1/dist/html2canvas.min.js,gh/TransparentLC/WechatMomentScreenshot@latest/main.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/combine/npm/mdui@1/dist/js/mdui.min.js,npm/html2canvas@1/dist/html2canvas.min.js"></script>
+    <script src="./main.js"></script>
     <!-- <script src="https://cdn.jsdelivr.net/npm/mdui@1/dist/js/mdui.min.js"></script> -->
     <!-- <script src="https://cdn.jsdelivr.net/npm/html2canvas@1/dist/html2canvas.min.js"></script> -->
     <!-- <script src="https://cdn.jsdelivr.net/gh/TransparentLC/WechatMomentScreenshot/main.min.js"></script> -->

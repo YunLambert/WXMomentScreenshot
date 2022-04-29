@@ -14,7 +14,7 @@ body {
 .topBar {
     width: calc(100% - 32px);
     height: 72px;
-    background-color: #303030;
+    background-color: #b4abab;
     font-size: 34px;
     font-weight: 500;
     color: #fff;
